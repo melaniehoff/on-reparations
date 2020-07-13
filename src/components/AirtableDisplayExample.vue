@@ -1,19 +1,22 @@
 <template>
   <div class="hello">
     <div class="headers">
-      <header v-for="field in records[0].fields" :key="field">
+      <!-- <header v-for="field in Object.keys(records[0].fields)" :key="field">
         {{ field }}
-      </header>
+      </header> -->
+      <header>Reparations to me means:</header>
+            <header>The people to whom reparations must be made are:</header>
+                        <header>My role in reparations is:</header>
+                                          <header>The state's role in reparations is:</header>
+
     </div>
     <div class="entries">
-      <div class="entry" v-for="record in records" v-bind:key="record">
-        <div
-          class="field left"
-          v-for="field in Object.keys(record.fields)"
-          :key="field"
-        >
-          {{ record.fields[field] }}
-        </div>
+      <div class="entry" v-for="record in records" v-bind:key="record.id">
+        <div class="field left">{{ record.fields["Reparations to me means:"] }}</div>
+        <div class="field left">{{ record.fields["The people to whom reparations must be made are:"] }}</div>
+        <div class="field left">{{ record.fields["My role in reparations is:"] }}</div>
+        <div class="field left">{{ record.fields["The state's role in reparations is:"] }}</div>
+
       </div>
     </div>
   </div>
@@ -82,6 +85,7 @@ li {
   height: auto;
   flex-basis: 25%;
   overflow: scroll;
+  padding: .4em;
 }
 
 

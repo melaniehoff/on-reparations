@@ -1,11 +1,18 @@
 <template>
   <div id="app">
+    <!-- <HelloWorld :records="records" /> -->
     <AirtableDisplayExample :records="records" />
+    <!-- <HelloWorld /> -->
   </div>
 </template>
 
 <script>
-import AirtableDisplayExample from "./components/AirtableDisplayExample.vue";
+
+/* eslint-disable */
+
+
+import AirtableDisplayExample from "@/components/AirtableDisplayExample.vue";
+import HelloWorld from "@/components/HelloWorld.vue";
 
 const process_api_key = process.env.VUE_APP_AIRTABLE_API_KEY;
 const airtable_table = process.env.VUE_APP_AIRTABLE_TABLE;
@@ -15,7 +22,8 @@ const airtable_view = process.env.VUE_APP_AIRTABLE_VIEW ;
 export default {
   name: "App",
   components: {
-    AirtableDisplayExample
+    AirtableDisplayExample,
+    HelloWorld,
   },
   data: function() {
     return {
@@ -56,11 +64,18 @@ export default {
 </script>
 
 <style>
+
+body {
+  color: white;
+  background-color: black;
+}
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  color: #2c3e50;
+  color: white;
+  background-color: black;
   margin-top: 60px;
+  padding: .5em;
 }
 </style>
