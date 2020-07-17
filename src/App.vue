@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <!-- <HelloWorld :records="records" /> -->
+    <HelloWorld :records="records" />
     <AirtableDisplayExample :records="records" />
     <!-- <HelloWorld /> -->
   </div>
