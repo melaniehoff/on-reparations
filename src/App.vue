@@ -87,4 +87,18 @@ background-image: linear-gradient(to right top, #e1e992, #c8e18a, #add985, #92d0
   margin-top: 60px;
   padding: 1em;
 }
+
+@media only screen and (max-width: 1080px) {
+  #app {
+    display: none;
+  }
+
+  #mobile {
+    color: green;
+    display: block !important;
+    font-size: 3em;
+  }
+}
+
+
 </style>
