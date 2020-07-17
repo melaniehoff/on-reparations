@@ -88,7 +88,7 @@ background-image: linear-gradient(to right top, #e1e992, #c8e18a, #add985, #92d0
   padding: 1em;
 }
 
-@media only screen and (max-width: 1080px) {
+@media only screen and (max-width: 1020px) {
   #app {
     display: none;
   }
