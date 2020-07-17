@@ -65,17 +65,25 @@ export default {
 
 <style>
 
+
+/* font-family: 'Kelly Slab', cursive;
+font-family: 'Cinzel Decorative', cursive;
+font-family: 'DM Serif Display', serif;
+font-family: 'MuseoModerno', cursive;
+font-family: 'Red Rose', cursive; */
+
 body {
-  color: white;
-  background-color: black;
+  background: no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
+
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  color: white;
-  background-color: black;
+  font-family: 'Red Rose', cursive;
+  color: black;
   margin-top: 60px;
-  padding: .5em;
+  padding: 1em;
 }
 </style>
