@@ -78,6 +78,7 @@ body {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+background-image: linear-gradient(to right top, #e1e992, #c8e18a, #add985, #92d082, #75c780, #74c77b, #73c775, #73c76f, #94ce62, #b7d456, #dad84e, #ffda4c);
 }
 
 #app {

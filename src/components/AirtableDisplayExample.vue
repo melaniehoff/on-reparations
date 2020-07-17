@@ -46,7 +46,7 @@ export default {
   align-items: flex-start;
   align-content: flex-start;
   justify-content: space-between;
-  background-color: yellow;
+  background-color: #FFDA4C;
 }
 
 header {

@@ -105,7 +105,7 @@ h2 {
 }
 
 #share:hover {
-  color: #d07c0b;
+  color: #FFDA4C;
 }
 
 
