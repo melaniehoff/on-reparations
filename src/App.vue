@@ -2,7 +2,9 @@
   <div id="app">
     <HelloWorld :records="records" />
     <AirtableDisplayExample :records="records" />
-    <!-- <HelloWorld /> -->
+
+      <router-view name="view" />
+    
   </div>
 </template>
 
@@ -31,6 +33,7 @@ export default {
     };
   },
   created() {
+    this.$store.dispatch("fetchData");
     this.loadAirtableData();
   },
   methods: {
