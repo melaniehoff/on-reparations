@@ -1,6 +1,15 @@
 <template>
   <div class="meditation">
-    Meditation!!!!#$#$@#
+    Meditation!!!! Goes!! Here!!
+
+    <br />
+
+    Imagine an intro meditation
+
+    <router-link class="link" :to="{ name: 'IslandView' }">IslandView</router-link>
+    <router-link class="link" :to="{ name: 'ReparationsDisplay' }">ReparationsDisplay</router-link>
+    
+
   </div>
 </template>
 
@@ -24,7 +33,7 @@ export default {
   display: flex;
   min-height: 100vh;
   align-items: stretch;
-  flex-direction: row;
+  flex-direction: column;
   margin: 10vh 10vw;
 }
 

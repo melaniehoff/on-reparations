@@ -6,6 +6,9 @@ import VueRouter from "vue-router";
 import store from '@/store'
 
 import Meditation from "@/components/Meditation.vue";
+import QuestionView from "@/components/QuestionView.vue";
+import IslandView from "@/components/IslandView.vue";
+import ReparationsDisplay from "@/components/ReparationsDisplay.vue";
 import About from "@/components/About.vue";
 
 Vue.use(VueRouter);
@@ -23,6 +26,27 @@ const routes = [
     components: {
       view: Meditation,
     }
+  },
+  {
+    path: "/reparations-display",
+    name: "ReparationsDisplay",
+    components: {
+      view: ReparationsDisplay,
+    },
+  },
+  {
+    path: "/island-view",
+    name: "IslandView",
+    components: {
+      view: IslandView,
+    },
+  },
+  {
+    path: "/question-view/:question?",
+    name: "QuestionView",
+    components: {
+      view: QuestionView,
+    },
   },
   {
     path: "/about",

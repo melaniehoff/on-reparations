@@ -1,7 +1,7 @@
 <template>
   <div id="app">
-    <TitleHeader  />
-    <ReparationsDisplay  />
+    <!--<TitleHeader  />
+    <ReparationsDisplay  />-->
 
       <router-view name="view" />
     
