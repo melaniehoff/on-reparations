@@ -23,8 +23,7 @@
 
 <script>
 export default {
-  name: "Hello World",
-  props: ["records"]
+  name: "TitleHeader",
 };
 </script>
 
