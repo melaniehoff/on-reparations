@@ -10,9 +10,10 @@
                         <header>My role in reparations is:</header>
                                           <header>The state's role in reparations is:</header>
 
+
     </div>
     <div class="entries">
-      <div class="entry" v-for="record in records" v-bind:key="record.id">
+      <div class="entry" v-for="record in reparations" v-bind:key="record.id">
         <div class="field left location">{{ record.fields["Location"] }}</div>
         <div class="field left">{{ record.fields["Reparations to me means:"] }}</div>
         <div class="field left">{{ record.fields["The people to whom reparations must be made are:"] }}</div>
@@ -26,8 +27,15 @@
 
 <script>
 export default {
-  name: "AirtableDisplayExample",
-  props: ["records"]
+  name: "ReparationsDisplay",
+  data() {
+    return {};
+  },
+  computed: {
+    reparations() {
+      return this.$store.state.reparations;
+    }
+  },
 };
 </script>
 
