@@ -10,6 +10,7 @@ import QuestionView from "@/components/QuestionView.vue";
 import IslandView from "@/components/IslandView.vue";
 import ReparationsDisplay from "@/components/ReparationsDisplay.vue";
 import About from "@/components/About.vue";
+import TitleHeader from "@/components/TitleHeader.vue";
 
 Vue.use(VueRouter);
 
@@ -24,6 +25,7 @@ const routes = [
     path: "/meditation",
     name: "Meditation",
     components: {
+      header: TitleHeader,
       view: Meditation,
     }
   },
@@ -31,6 +33,7 @@ const routes = [
     path: "/reparations-display",
     name: "ReparationsDisplay",
     components: {
+      header: TitleHeader,
       view: ReparationsDisplay,
     },
   },
@@ -38,6 +41,7 @@ const routes = [
     path: "/island-view",
     name: "IslandView",
     components: {
+      header: TitleHeader,
       view: IslandView,
     },
   },
@@ -45,14 +49,16 @@ const routes = [
     path: "/question-view/:question?",
     name: "QuestionView",
     components: {
+      header: TitleHeader,
       view: QuestionView,
     },
   },
   {
     path: "/about",
-    name: "About",
+    name: "TitleHeader",
     components: {
-      view: About
+      header: TitleHeader,
+      view: About ,
     },
   },
 ];

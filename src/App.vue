@@ -3,6 +3,7 @@
     <!--<TitleHeader  />
     <ReparationsDisplay  />-->
 
+      <router-view name="header" />
       <router-view name="view" />
     
   </div>

@@ -22,7 +22,6 @@ export default {
 <style scoped lang="scss">
 .about {
   display: flex;
-  min-height: 100vh;
   align-items: stretch;
   flex-direction: row;
   margin: 10vh 10vw;

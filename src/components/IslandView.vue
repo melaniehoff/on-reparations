@@ -37,6 +37,8 @@ export default {
   }
 };
 </script>
+
+
 <style scoped lang="scss">
 .about {
   display: flex;

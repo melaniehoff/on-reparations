@@ -6,7 +6,7 @@
 
     Imagine an intro meditation
 
-    <router-link class="link" :to="{ name: 'IslandView' }">IslandView</router-link>
+    <router-link class="link" :to="{ name: 'IslandView' }">IslandView!!!!k</router-link>
     <router-link class="link" :to="{ name: 'ReparationsDisplay' }">ReparationsDisplay</router-link>
     
 
