@@ -39,6 +39,7 @@ function loadAirtableData(callback) {
 export default new Vuex.Store({
   state: {
     reparations: [],
+    reparationQuestions: [],
     hasLoaded: false,
   },
   getters: {
@@ -50,6 +51,9 @@ export default new Vuex.Store({
 		setReparations(state, r) {
 			state.reparations = r;
 		},
+    setReparationQuestions(state, q) {
+      state.reparationQuestions = q;
+    },
   },
   actions: {
     fetchData(context) {
@@ -59,8 +63,21 @@ export default new Vuex.Store({
     },
     fetchReparations(context) {
       loadAirtableData(function(records) {
-        var reparations = records.filter(w => w.fields["Name"]);
+        var reparations = records.filter(w => w.fields["Publish"]);
         context.commit("setReparations", reparations);
+
+        var repQs;
+        try { 
+          repQs = Object.keys(reparations[0].fields);
+          repQs = repQs.filter(function(q) {
+            // filter out only questions
+            return /eparations/g.test(q);
+          });
+        } catch(e) { }
+
+        context.commit("setReparationQuestions", repQs);
+
+
       });
     },
   }

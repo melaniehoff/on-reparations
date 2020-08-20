@@ -25,12 +25,7 @@ export default {
       return this.$store.state.reparations;
     },
     reparationQuestions() {
-      var self = this;
-      try { 
-        return Object.keys(self.reparations[0].fields);
-      } catch(e) {
-        return []
-      }
+      return this.$store.state.reparationQuestions;
     },
   },
   methods: {
