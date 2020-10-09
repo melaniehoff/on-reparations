@@ -6,11 +6,14 @@ import VueRouter from "vue-router";
 import store from '@/store'
 
 import Meditation from "@/components/Meditation.vue";
-import QuestionView from "@/components/QuestionView.vue";
+import ResponsesView from "@/components/ResponsesView.vue";
 import IslandView from "@/components/IslandView.vue";
 import ReparationsDisplay from "@/components/ReparationsDisplay.vue";
 import About from "@/components/About.vue";
-import TitleHeader from "@/components/TitleHeader.vue";
+import Home from "@/components/Home.vue";
+import NavHeader from "@/components/NavHeader.vue";
+import BlankHeader from "@/components/BlankHeader.vue";
+
 
 Vue.use(VueRouter);
 
@@ -19,45 +22,54 @@ var siteName = "Reparations Brigade"
 const routes = [
   {
     path: "/",
-    redirect: "/meditation",
+    redirect: "/home",
+  },
+  {
+    path: "/home",
+    name: "Home",
+    components: {
+      header: BlankHeader,
+      view: Home,
+    },
   },
   {
     path: "/meditation",
     name: "Meditation",
     components: {
-      header: TitleHeader,
+      header: BlankHeader,
       view: Meditation,
     }
-  },
-  {
-    path: "/reparations-display",
-    name: "ReparationsDisplay",
-    components: {
-      header: TitleHeader,
-      view: ReparationsDisplay,
-    },
   },
   {
     path: "/island-view",
     name: "IslandView",
     components: {
-      header: TitleHeader,
+      header: NavHeader,
       view: IslandView,
     },
   },
   {
-    path: "/question-view/:question?",
-    name: "QuestionView",
+    path: "/reparations-display",
+    name: "ReparationsDisplay",
     components: {
-      header: TitleHeader,
-      view: QuestionView,
+      header: NavHeader,
+      view: ReparationsDisplay,
+    },
+  },
+
+  {
+    path: "/responses/:question?",
+    name: "ResponsesView",
+    components: {
+      header: NavHeader,
+      view: ResponsesView,
     },
   },
   {
     path: "/about",
-    name: "TitleHeader",
+    name: "NavHeader",
     components: {
-      header: TitleHeader,
+      header: NavHeader,
       view: About ,
     },
   },
@@ -65,7 +77,10 @@ const routes = [
 
 const router = new VueRouter({
   base: process.env.BASE_URL,
-  routes
+  routes: routes,
+  scrollBehavior (to, from, savedPosition) {
+    return { x: 0, y: 0 }
+  }
 });
 
 // adds title to document

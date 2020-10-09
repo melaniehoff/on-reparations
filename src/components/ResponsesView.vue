@@ -1,23 +1,28 @@
 <template>
   <div class="about">
-    QuestionView!!!!!!!!
+    ResponsesView!!!!!!!!
     for the question:
     {{ question }} 
 
     <div class="response" v-for="r in reparations" v-bind:key="r.id">
       {{ r.fields[question] }}
     </div>
+
+    <IslandView />
   </div>
 </template>
 
 <script>
 
+import IslandView from "@/components/IslandView.vue";
+
 export default {
-  name: "QuestionView",
+  name: "ResponsesView",
   data() {
     return {};
   },
   components: {
+    IslandView,
   },
   computed: {
     question() {
@@ -31,6 +36,8 @@ export default {
   }
 };
 </script>
+
+
 <style scoped lang="scss">
 .about {
   display: flex;

@@ -1,5 +1,6 @@
 <template>
   <div class="hello">
+    <div class="welcome-container">
 <div class="side-by-side">
 
 <img src="@/assets/rep1.png">
@@ -7,23 +8,26 @@
     <!-- <h2>Reparations comes from the word repair.</h2> -->
 </div>
 
-<div class="side-by-side2">
+<!-- <div class="side-by-side2"> -->
 <p>
   Reparations comes from the word repair.
 </p>
-
-<div class="circle">
+<!-- <div class="circle">
   <a id="share" target="_blank" href="https://airtable.com/shrj959WnUQbuxKxV">Share yours</a>
-</div>
+</div> -->
+<!-- </div> -->
+<router-link class="link" :to="{ name: 'Meditation' }">Meditation ⤳</router-link>
+  
 
 </div>
-<br />
+
 </div>
 </template>
 
 <script>
+
 export default {
-  name: "TitleHeader",
+  name: "NavHeader",
 };
 </script>
 
@@ -56,8 +60,43 @@ export default {
 
 
 img {
-  width: 500px;
-  margin-bottom: 2em;
+  width: 50%;
+  margin-bottom: 0em;
+}
+.link {
+  text-decoration: none;
+  font-size: 3em;
+}
+.next-container {
+  border: solid 4px black;
+  border-radius: 50%;
+  width: 5em;
+  height: 5em;
+  margin: auto;
+}
+
+
+
+#global {
+  display: flex;
+  float: right;
+  width: 30%;
+  margin-right: 7em;
+}
+
+button {
+  font-family: 'MuseoModerno', cursive;
+  font-size: 2em;
+  background: transparent;
+  z-index: 10;
+  font-weight: 800;
+  border: none;
+  border-bottom: 4px solid black;
+  
+}
+
+button:focus {     
+    /* background-color:yellow;     */
 }
 
 p {
@@ -68,45 +107,11 @@ p {
   font-family: 'MuseoModerno', cursive;
   /* font-family: 'Cinzel Decorative', cursive; */
 }
-h2 {
-  /* font-size: 7em;
-  color: black;
-  margin-bottom: .5em;
-  font-family: "fleuronmixed"; */
-}
+
 
 .side-by-side {
   width: 100vw;
 }
-
-
-.side-by-side2 {
-  width: 100vw;
-  display: flex;
-}
-
-#global {
-  display: flex;
-  float: right;
-  width: 400px;
-  margin-right: 7em;
-}
-
-#share {
-  display: block;
-  position: absolute;
-  font-size: 3em;
-  color: #231E20;
-  font-family: 'MuseoModerno', cursive;
-  top: 12em;
-  right: 3em;
-  transform: rotate(12deg) !important;
-}
-
-#share:hover {
-  color: #FFDA4C;
-}
-
 
 
 a, a:visited {
@@ -117,7 +122,6 @@ a, a:visited {
 a:hover {
   color: pink;
 }
-
 
 
 </style>

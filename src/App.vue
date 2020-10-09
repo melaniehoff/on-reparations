@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <!--<TitleHeader  />
+    <!--<NavHeader  />
     <ReparationsDisplay  />-->
 
       <router-view name="header" />
@@ -15,7 +15,7 @@
 
 
 import ReparationsDisplay from "@/components/ReparationsDisplay.vue";
-import TitleHeader from "@/components/TitleHeader.vue";
+import NavHeader from "@/components/NavHeader.vue";
 
 const process_api_key = process.env.VUE_APP_AIRTABLE_API_KEY;
 const airtable_table = process.env.VUE_APP_AIRTABLE_TABLE;
@@ -26,7 +26,7 @@ export default {
   name: "App",
   components: {
     ReparationsDisplay,
-    TitleHeader,
+    NavHeader,
   },
   data() {
     return {
@@ -59,13 +59,13 @@ background-image: linear-gradient(to right top, #e1e992, #c8e18a, #add985, #92d0
 }
 
 #app {
-  font-family: 'Red Rose', cursive;
+   font-family: 'MuseoModerno', cursive;
   color: black;
   margin-top: 60px;
   padding: 1em;
 }
 
-@media only screen and (max-width: 1020px) {
+/* @media only screen and (max-width: 1020px) {
   #app {
     display: none;
   }
@@ -75,7 +75,7 @@ background-image: linear-gradient(to right top, #e1e992, #c8e18a, #add985, #92d0
     display: block !important;
     font-size: 3em;
   }
-}
+} */
 
 
 </style>
